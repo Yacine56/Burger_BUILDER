@@ -7,7 +7,7 @@ import axios from 'axios'
 export function* logoutSaga(action){
    yield localStorage.removeItem('token')
    yield localStorage.removeItem('expirationTime')
-    
+
    yield put({
        type:actionType.AUTH_LOGOUT
    })
@@ -27,11 +27,11 @@ export function* authSaga(action){
          password: action.password,
          returnSecureToken: true
      };
-       let URL='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC-S5YELYe-YKYyNEp55F012DT-a-SQ1T8'
+       let URL='https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
          if(!action.isSignUp){
-             URL='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyC-S5YELYe-YKYyNEp55F012DT-a-SQ1T8'
-         } 
-       
+             URL='https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='
+         }
+
       const response= yield axios.post(URL,authData)
       console.log(response)
            try{
@@ -67,6 +67,3 @@ export function* authSaga(action){
           }
         }
       }
-
-
-
