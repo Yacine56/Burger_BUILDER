@@ -1,0 +1,38 @@
+.Input{
+    width: 100%;
+    padding: 10px;
+    box-sizing:border-box;
+    border: 1px solid grey;
+}
+
+
+.Label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+select,.InputElement{
+
+border: 1px solid grey;
+background-color:white;
+font: inherit;
+padding: 6px 10px;
+display: block;
+width: 100%;
+box-sizing:border-box;
+
+}
+.InputElement:focus{
+    background-color:lightgrey;
+}
+
+.Invalid{
+    border: 1px solid red ;
+    background-color:salmon;
+}
+
+.ValidationError {
+    color: red;
+    margin: 5px 0;
+} 

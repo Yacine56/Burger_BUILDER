@@ -1,0 +1,23 @@
+.CheckoutForm{
+    width: 100%;
+ 
+    margin: auto;
+}
+
+.ChekoutSummary{
+
+    text-align: center;
+    width: 100%;
+
+    margin: auto;
+}
+
+@media(min-width:600px){
+    .ChekoutSummary{
+        width: 500px;
+    }
+}
+
+.Button{
+    text-align: center;
+}
